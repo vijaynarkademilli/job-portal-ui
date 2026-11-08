@@ -141,17 +141,57 @@ const Footer = () => {
 
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-wrap justify-center md:justify-start gap-6 text-sm text-gray-400 mb-6 md:mb-0">
-              <a className="group relative hover:text-white transition-colors duration-300">
+              <a
+                tabIndex={0}
+                aria-describedby="privacy-policy-tooltip"
+                className="group relative cursor-pointer hover:text-white focus:text-white focus:outline-none transition-colors duration-300"
+              >
                 <span className="relative z-10">Privacy Policy</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300 -inset-2"></div>
+                <div
+                  id="privacy-policy-tooltip"
+                  role="tooltip"
+                  className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-64 p-3 rounded-lg bg-gray-800 border border-gray-700 text-xs text-gray-300 leading-relaxed shadow-xl z-20 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus:opacity-100 group-focus:visible transition-opacity duration-300"
+                >
+                  We only collect the information needed to create your account,
+                  match you with jobs, and process applications. We never sell
+                  your personal data to third parties.
+                </div>
               </a>
-              <a className="group relative hover:text-white transition-colors duration-300">
+              <a
+                tabIndex={0}
+                aria-describedby="terms-of-service-tooltip"
+                className="group relative cursor-pointer hover:text-white focus:text-white focus:outline-none transition-colors duration-300"
+              >
                 <span className="relative z-10">Terms of Service</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300 -inset-2"></div>
+                <div
+                  id="terms-of-service-tooltip"
+                  role="tooltip"
+                  className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-64 p-3 rounded-lg bg-gray-800 border border-gray-700 text-xs text-gray-300 leading-relaxed shadow-xl z-20 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus:opacity-100 group-focus:visible transition-opacity duration-300"
+                >
+                  By using JobPortal you agree to provide accurate information,
+                  respect other users, and use the platform only for legitimate
+                  job searching and hiring.
+                </div>
               </a>
-              <a className="group relative hover:text-white transition-colors duration-300">
+              <a
+                tabIndex={0}
+                aria-describedby="cookie-policy-tooltip"
+                className="group relative cursor-pointer hover:text-white focus:text-white focus:outline-none transition-colors duration-300"
+              >
                 <span className="relative z-10">Cookie Policy</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300 -inset-2"></div>
+                <div
+                  id="cookie-policy-tooltip"
+                  role="tooltip"
+                  className="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-64 p-3 rounded-lg bg-gray-800 border border-gray-700 text-xs text-gray-300 leading-relaxed shadow-xl z-20 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus:opacity-100 group-focus:visible transition-opacity duration-300"
+                >
+                  We use cookies to keep you signed in, remember your
+                  preferences such as theme, and improve your experience on
+                  JobPortal. You can clear cookies anytime from your browser
+                  settings.
+                </div>
               </a>
               <Link
                 to="/contact"
